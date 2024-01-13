@@ -17,7 +17,7 @@ disableLanguages = ["fr"] # example: ["fr"] for disable french language
 [taxonomies]
  tag = "tag"
  category = "categories"
- side-hustle = "side-hustles"
+ earn-money = "products"
 ############################# Modules ##############################
 [module]
 [module.hugoVersion]
