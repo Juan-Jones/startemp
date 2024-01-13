@@ -5,6 +5,7 @@ image: "images/post/post-2.png"
 date: 2021-01-24T18:19:25+06:00
 categories: ["artificial intelligence"]
 tags: ["tech", "ai"]
+side-hustles: ["invest", "influence"]
 type: "featured" # available types: [featured/regular]
 draft: false
 ---
