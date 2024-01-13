@@ -1,0 +1,23 @@
+<!-- layouts/categories.html -->
+
+{{ define "main" }}
+  <h1>All Categories</h1>
+
+  {{ range .Data.Taxonomies.categories }}
+    <h2>{{ .Name }}</h2>
+
+    {{ with .Terms }}
+      {{ range . }}
+        <h3>{{ .Name }}</h3>
+
+        {{ with .Pages }}
+          <ul>
+            {{ range . }}
+              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
