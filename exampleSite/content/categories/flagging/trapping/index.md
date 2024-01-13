@@ -1,6 +1,9 @@
 ---
 title: "Trapping"
-description: "Check out personal finance tips, advice and information such as financial planning, budgeting, making money, investing and so on."
-categories: ["flagging, trapping"]
+[flagging]
+  name = "flagging"
+  [flagging.trapping]
+    name = "trapping"
+    description = "Description for the ecommerce sub-category"
 draft: false
 ---
