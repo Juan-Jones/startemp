@@ -1,8 +1,8 @@
 ---
 title: "Trapping"
-[flagging]
+["flagging"]
   name = "flagging"
-  [flagging.trapping]
+  ["flagging.trapping"]
     name = "trapping"
     description = "Description for the ecommerce sub-category"
 draft: false
