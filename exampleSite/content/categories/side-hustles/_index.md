@@ -1,4 +1,4 @@
 ---
 title: "Side Husltes"
-categories: ["side hustles"]
+categories: ["side-hustles"]
 ---
