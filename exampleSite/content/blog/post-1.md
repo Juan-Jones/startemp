@@ -3,7 +3,6 @@ title: "Artificial Intelligence and Robotics In A Nutshell"
 description: "meta description"
 image: "images/post/post-1.png"
 date: 2021-01-24T18:19:25+06:00
-categories: ["flagging","trapping"]
 tags: ["tech", "ai"]
 type: "regular" # available types: [featured/regular]
 draft: false
