@@ -15,7 +15,10 @@
         <div class="border mb-5 pt-4 rounded">
           <div class="row mx-0 g-5">
             <!-- recent post -->
-            {{ $paginator:= .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections ) }}
+            {{ $regularPages := .Data.RegularPagesRecursive }}
+{{ if $regularPages }}
+  {{ $paginator := .Paginate (where $regularPages "Section" "in" site.Params.mainSections ) }}
+{{ end }}
             {{ range $paginator.Pages }}
             <div class="col-sm-6 mb-4">
               {{ .Render "post" }}
