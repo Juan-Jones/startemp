@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "categories") (eq .Section "tags") }}
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "categories") (eq .Section "tags")  (eq .Sections "section-online") (eq .Sections "sections-online")}}
 <section class="section">
   <div class="container">
     <div class="row">
@@ -18,7 +18,7 @@
             <h2>Sections:</h2>
     <ul>
       {{ range . }}
-        {{ partial "section-li.html" . }}
+        {{ partial "section-online.html" . }}
       {{ end }}
     </ul>
             {{ $paginator:= .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections ) }}
