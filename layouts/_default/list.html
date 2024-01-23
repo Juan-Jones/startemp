@@ -15,6 +15,12 @@
         <div class="border mb-5 pt-4 rounded">
           <div class="row mx-0 g-5">
             <!-- recent post -->
+            <h2>Sections:</h2>
+    <ul>
+      {{ range . }}
+        {{ partial "section-li.html" . }}
+      {{ end }}
+    </ul>
             {{ $regularPages := .Data.RegularPagesRecursive }}
 {{ if $regularPages }}
   {{ $paginator := .Paginate (where $regularPages "Section" "in" site.Params.mainSections ) }}
