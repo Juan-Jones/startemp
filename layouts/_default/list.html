@@ -18,7 +18,7 @@
             <h2>Sections:</h2>
     <ul>
       {{ range . }}
-        {{ partial "section-online.html" . }}
+        {{ partial "section-li.html" . }}
       {{ end }}
     </ul>
             {{ $paginator:= .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections ) }}
