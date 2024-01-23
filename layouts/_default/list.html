@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "categories") (eq .Section "tags")  (eq .Section "li")}}
+  {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "categories") (eq .Section "tags")  (eq .Section "li")
     <section class="section">
       <div class="container">
         <div class="row">
@@ -13,6 +13,25 @@
           <div class="col-lg-8 mb-5 mb-lg-0">
             <div class="border mb-5 pt-4 rounded">
               <div class="row mx-0 g-5">
+                <!-- Inserted code block -->
+                {{ with .Sections }}
+                  <h2>Sections:</h2>
+                  <ul>
+                    {{ range . }}
+                      {{ partial "section-li.html" . }}
+                    {{ end }}
+                  </ul>
+                {{ end }}
+                {{ with .Pages }}
+                  <h2>Pages:</h2>
+                  <ul>
+                    {{ range . }}
+                      {{ .Render "li" }}
+                    {{ end }}
+                  </ul>
+                {{ end }}
+                <!-- End of inserted code block -->
+
                 <!-- recent post -->
                 {{ $paginator:= .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections ) }}
                 {{ range $paginator.Pages }}
