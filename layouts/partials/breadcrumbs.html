@@ -1,4 +1,4 @@
-{{- if and .Parent (not (eq .Kind "list")) -}}
+{{- if and .Parent (not (eq .Kind "category")) -}}
      {{- template "recursive-breadcrumbs" .Parent -}}
      {{- if (.Parent.Parent) -}}
           <span class="grey-text">{{.Title}}</span>
@@ -7,7 +7,7 @@
           &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
           <span class="grey-text">{{.Title}}</span>
      {{- end -}}
-{{- else if and (not (eq .Kind "home")) (not (eq .Kind "list")) -}}
+{{- else if and (not (eq .Kind "home")) (not (eq .Kind "category")) -}}
      <a href="{{.Site.BaseURL}}">Home</a>
      &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
      <span class="grey-text">{{.Title}}</span>
@@ -15,7 +15,7 @@
 
 
 {{- define "recursive-breadcrumbs" -}}
-     {{- if and .Parent (not (eq .Kind "list")) -}}
+     {{- if and .Parent (not (eq .Kind "category")) -}}
           {{- template "recursive-breadcrumbs" .Parent -}}
           <a href="{{.Permalink}}">{{.Title}}</a>
           &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
