@@ -1,6 +1,6 @@
 ---
 title: "Passive Income"
-investmentcategories: ["investments"]
+categories: ["investments"]
 ---
 
 ##GEt Passive make money
