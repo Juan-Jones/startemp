@@ -1,6 +1,6 @@
 ---
 title: "Investments"
-investmentcategories: ["investments"]
+categories: ["investments"]
 ---
 
 ## Investments
