@@ -1,0 +1,12 @@
+<!-- layouts/archive.html -->
+{{ define "main" }}
+<h1>Monthly Archives</h1>
+{{ range .Data.Pages.GroupByDate "2006-01" }}
+  <h2>{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}
+{{ end }}
