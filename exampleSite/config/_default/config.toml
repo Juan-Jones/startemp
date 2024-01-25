@@ -14,10 +14,7 @@ googleAnalytics = "" # example: UA-123-45, for more info, read the article https
 disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = ["fr"] # example: ["fr"] for disable french language
-[taxonomies]
- tag = "tags"
- category = "categories"
- products = "earn money"
+
 ############################# Modules ##############################
 [module]
 [module.hugoVersion]
@@ -66,3 +63,8 @@ suffixes = [""]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
+############################ taxonomies ###########################
+[taxonomies]
+  category = "categories"
+  drone_category = "drone"
+  youtube_category = "youtube"
