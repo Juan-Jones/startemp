@@ -41,12 +41,10 @@ maxAge = "720h"
 dir = ":resourceDir/_gen"
 maxAge = "720h"
 
-
 ############################# Markup ###############################
 [markup]
 [markup.goldmark.renderer]
 unsafe = true
-
 
 ############################ Media types ############################
 [mediaTypes]
@@ -57,12 +55,12 @@ suffixes = ["webmanifest"]
 delimiter = ""
 suffixes = [""]
 
-
 ############################ Output Format ###########################
 [outputFormats]
 [outputFormats.WebAppManifest]
 mediaType = "application/manifest+json"
 rel = "manifest"
+
 ############################ taxonomies ###########################
 [taxonomies]
   category = "categories"
