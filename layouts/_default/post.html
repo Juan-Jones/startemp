@@ -21,6 +21,7 @@
   {{ end }}
   <div class="card-body">
     <h3 class="h6">
+      {{ partial "breadcrumbs.html" . }}
       <a class="title-linked" href="{{.RelPermalink}}">{{.Title | markdownify}}</a>
     </h3>
     <ul class="list-inline card-meta d-flex align-items-center mb-3">
