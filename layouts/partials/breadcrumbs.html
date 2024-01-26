@@ -1,4 +1,5 @@
-{{- if or (eq .Kind "post") (eq .Kind "posts") -}}
+<br>
+{{- if or (eq .Kind "post") (eq .Kind "posts") (eq .Kind "blog") (eq .Kind "blogs") -}}
     {{- if .Parent -}}
         {{- template "recursive-breadcrumbs" .Parent -}}
         {{- if (.Parent.Parent) -}}
@@ -14,11 +15,3 @@
         <span class="grey-text">{{.Title}}</span>
     {{- end}}
 {{- end}}
-
-{{- define "recursive-breadcrumbs" -}}
-    {{- if .Parent -}}
-        {{- template "recursive-breadcrumbs" .Parent -}}
-        <a href="{{.Permalink}}">{{.Title}}</a>
-        &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
-    {{- end -}}
-{{- end -}}
