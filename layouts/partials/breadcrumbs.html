@@ -1,4 +1,3 @@
-<br>
 {{- if or (eq .Kind "post") (eq .Kind "posts") (eq .Kind "blog") (eq .Kind "blogs") -}}
     {{- if .Parent -}}
         {{- template "recursive-breadcrumbs" .Parent -}}
