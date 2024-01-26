@@ -1,9 +1,6 @@
-{{- $page := . -}
-<nav class="breadcrumb">
-<ul>
-{{- range .Parents.Reverse }}
-<li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-{{- end }}
-<li class="active">{{ .LinkTitle }}</li>
+<ul id="breadcrumbs">
+    {{- range .Ancestors.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 </ul>
-</nav>
