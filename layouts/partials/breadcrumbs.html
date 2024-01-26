@@ -1,24 +1,9 @@
-{{- if or (eq .Kind "post") (eq .Kind "posts") (eq .Kind "blog") (eq .Kind "blogs") -}}
-    {{- if .Parent -}}
-        {{- template "recursive-breadcrumbs" .Parent -}}
-        {{- if (.Parent.Parent) -}}
-            <span class="grey-text">{{.Title}}</span>
-        {{- else -}}
-            <a href="{{.Site.BaseURL}}">Home</a>
-            &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
-            <span class="grey-text">{{.Title}}</span>
-        {{- end -}}
-    {{- else if not (eq .Kind "home") -}}
-        <a href="{{.Site.BaseURL}}">Home</a>
-        &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
-        <span class="grey-text">{{.Title}}</span>
-    {{- end}}
-{{- end}}
-
-{{- define "recursive-breadcrumbs" -}}
-    {{- if .Parent -}}
-        {{- template "recursive-breadcrumbs" .Parent -}}
-        <a href="{{.Permalink}}">{{.Title}}</a>
-        &nbsp;&nbsp;<i class="fa fa-angle-right fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;
-    {{- end -}}
-{{- end -}}
+{{- $page := . -}
+<nav class="breadcrumb">
+<ul>
+{{- range .Parents.Reverse }}
+<li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+{{- end }}
+<li class="active">{{ .LinkTitle }}</li>
+</ul>
+</nav>
