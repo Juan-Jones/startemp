@@ -1,5 +1,5 @@
 ---
 title: "Passive Income"
-investmentscategories: ["passiveincome"]
+categories: ["passive income"]
 ---
 ## Passive I
