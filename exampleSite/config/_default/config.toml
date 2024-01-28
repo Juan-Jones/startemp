@@ -67,7 +67,7 @@ rel = "manifest"
 ############################ taxonomies ###########################
 [taxonomies]
   tag = "tags"
-  category = "categories"
+  category = "slug"
   freelancing = "freelancing"
   blogtag = "blogtags"
   blogcategory = "blogcategories"
@@ -75,6 +75,6 @@ rel = "manifest"
   date = "date"
 ############################ permalinks ###########################
 [permalinks]
-  blogcategories = "/blog/slug/:title"
+  blogcategories = "/blog/categories/:title"
   blogtags = "/blog/tags/:title"
   categories = "/:slug/"
