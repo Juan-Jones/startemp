@@ -70,11 +70,11 @@ rel = "manifest"
   category = "slug"
   freelancing = "freelancing"
   blogtag = "blogtags"
-  blogcategory = "blogcategories"
+  blogcategory = "blogslug"
   archive = "archives"
   date = "date"
 ############################ permalinks ###########################
 [permalinks]
-  blogcategories = "/blog/categories/:title"
+  blogcategories = "/blog/slug/:title"
   blogtags = "/blog/tags/:title"
   categories = "/:slug/"
