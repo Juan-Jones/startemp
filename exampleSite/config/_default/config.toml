@@ -77,3 +77,4 @@ rel = "manifest"
 [permalinks]
   blogcategories = "/blog/slug/:title"
   blogtags = "/blog/tags/:title"
+  categories = "/:slug/"
