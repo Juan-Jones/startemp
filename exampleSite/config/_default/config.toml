@@ -68,6 +68,7 @@ rel = "manifest"
 [taxonomies]
   tag = "tags"
   category = "categories"
+  freelancing = "freelancing"
   blogtag = "blogtags"
   blogcategory = "blogcategories"
   archive = "archives"
